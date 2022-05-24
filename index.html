@@ -18,18 +18,19 @@
             <a href="projects.html" target="info-window">projects</a>
             <a href="achievements.html" target="info-window">achievements</a>
         </div>
-        <iframe src="about.html" name="info-window" id="info-window"></iframe>
+        <iframe src="about.html" name="info-window" id="info-window" onload="updateIFrame()"></iframe>
     </div>
 
     <script>
         var root = document.querySelector(':root');
-        // var iframe = document.getElementById('info-window').contentWindow.document.querySelector(':root');
         var colors = ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'];
         var col = 0;
         function setColor() {
             col = (col + 1) % colors.length;
             root.style.setProperty('--hovercolor', colors[col]);
-            // iframe.style.setProperty('--hovercolor', color[col]);
+            updateIFrame();
+        }
+        function updateIFrame() {
             document.getElementById('info-window').contentWindow.document.documentElement.style.setProperty('--hovercolor', colors[col]);
         }
     </script>
