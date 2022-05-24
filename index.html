@@ -12,13 +12,13 @@
         <a href="#categories" class="scroll-button">›</a>
     </div>
     <div class="info" id="categories">
-        <div class="categories-grid" onclick="updateIFrame()">
+        <div class="categories-grid">
             <a href="about.html" target="info-window">about</a>
             <a href="experience.html" target="info-window">experience</a>
             <a href="projects.html" target="info-window">projects</a>
             <a href="achievements.html" target="info-window">achievements</a>
         </div>
-        <iframe src="about.html" name="info-window" id="info-window"></iframe>
+        <iframe src="about.html" name="info-window" id="info-window" onload="updateIFrame()"></iframe>
     </div>
 
     <script>
