@@ -1,0 +1,12 @@
+.categories-grid {
+    width: 5vw;
+    height: 10vh;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.categories-grid>a {
+    padding: 2vw;
+    font-size: 3vh;
+    justify-content: left;
+}

@@ -1,0 +1,25 @@
+.categories-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.proj {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.proj>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 20vw;
+}
+
+.proj>h2 {
+    text-align: center;
+}

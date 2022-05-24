@@ -3,12 +3,12 @@
 
 <head>
     <title>David Zhuang</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="title-page">
-        <h1>David Zhuang</h1>
+        <h1 onclick="setColor()">David Zhuang</h1>
         <a href="#categories" class="scroll-button">›</a>
     </div>
     <div class="info" id="categories">
@@ -20,6 +20,19 @@
         </div>
         <iframe src="about.html" name="info-window" id="info-window"></iframe>
     </div>
+
+    <script>
+        var root = document.querySelector(':root');
+        // var iframe = document.getElementById('info-window').contentWindow.document.querySelector(':root');
+        var colors = ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'];
+        var col = 0;
+        function setColor() {
+            col = (col + 1) % colors.length;
+            root.style.setProperty('--hovercolor', colors[col]);
+            // iframe.style.setProperty('--hovercolor', color[col]);
+            document.getElementById('info-window').contentWindow.document.documentElement.style.setProperty('--hovercolor', colors[col]);
+        }
+    </script>
 </body>
 
 </html>
