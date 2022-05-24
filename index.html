@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>David Zhuang</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="title-page">
-            <h1>David Zhuang</h1>
-            <a href="#categories" class="scroll-button">›</a>
+
+<head>
+    <title>David Zhuang</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <div class="title-page">
+        <h1>David Zhuang</h1>
+        <a href="#categories" class="scroll-button">›</a>
+    </div>
+    <div class="info" id="categories">
+        <div class="categories-grid">
+            <a href="about.html" target="info-window">about</a>
+            <a href="experience.html" target="info-window">experience</a>
+            <a href="projects.html" target="info-window">projects</a>
+            <a href="achievements.html" target="info-window">achievements</a>
         </div>
-        <div class="categories-grid" id="categories">
-            <a href="about.html" class="about">about</a>
-            <a href="experience.html">experience</a>
-            <a href="projects.html">projects</a>
-            <a href="achievements.html">achievements</a>
-        </div>
-    </body>
+        <iframe src="about.html" name="info-window" id="info-window"></iframe>
+    </div>
+    <script>
+        var div = document.getElementById("info-window");
+        div.onload = function() {
+            div.style.height =
+              div.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</body>
+
 </html>

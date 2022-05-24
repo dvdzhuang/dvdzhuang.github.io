@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Experience</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="exp.css">
+</head>
+
+<body>
+    <div class="exp-grid">
+        <div class="logo">
+            <img src="exp/ptc.svg" alt="PTC">
+            <h1>Onshape Modeling Co-op</h1>
+            <h2>Boston, MA</h2>
+            <h3>Feb 2021 - Aug 2021</h3>
+        </div>
+        <div class="logo">
+            <ul>
+                <li>Wrote front-end and back-end code for Onshape, an online CAD software service</li>
+                <li>Developed new features for users, primarily using Java and TypeScript
+                    <ul>
+                        <li>Added ability to 'dissolve' assemblies, i.e. finding all instances of an assembly, moving
+                            their parts into their respective parent assemblies, and deleting those instances.
+                            <a href="https://forum.onshape.com/discussion/16011/improvements-to-onshape-april-19th-2021/#dissolving-subassemblies"
+                                target="_blank">
+                                Read more here!</a>
+                        </li>
+                        <li>Created a new way to import projects into Onshape. This method balances performance and
+                            readability in large projects. More specifically, it creates a document for each assembly.
+                            For each unique part in the file, a Part Studio is created in the document containing the
+                            lowest-level assembly that the part appears in.
+                            <a href="https://forum.onshape.com/discussion/16462/improvements-to-onshape-july-13th-2021/#import-improvements"
+                                target="_blank">
+                                Read more here!</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>Participated in code reviews and debugging, working across software development lifecycle</li>
+                <li>Wrote JUnit and Protractor tests for new features</li>
+            </ul>
+        </div>
+        <div class="logo" id="roblox">
+            <img src="exp/roblox.png" alt="Roblox">
+            <h1>Software Engineer</h1>
+            <h2>San Mateo, CA</h2>
+            <h3>July 2022 -</h3>
+        </div>
+    </div>
+</body>
+
 </html>
