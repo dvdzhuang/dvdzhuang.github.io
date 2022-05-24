@@ -12,7 +12,7 @@
         <a href="#categories" class="scroll-button">›</a>
     </div>
     <div class="info" id="categories">
-        <div class="categories-grid">
+        <div class="categories-grid" onclick="updateIFrame()">
             <a href="about.html" target="info-window">about</a>
             <a href="experience.html" target="info-window">experience</a>
             <a href="projects.html" target="info-window">projects</a>
@@ -23,17 +23,17 @@
 
     <script>
         var root = document.querySelector(':root');
-        // var iframe = document.getElementById('info-window').contentWindow.document.querySelector(':root');
         var colors = ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'];
         var col = 0;
         function setColor() {
             col = (col + 1) % colors.length;
             root.style.setProperty('--hovercolor', colors[col]);
-            // iframe.style.setProperty('--hovercolor', color[col]);
+            updateIFrame();
+        }
+        function updateIFrame() {
             document.getElementById('info-window').contentWindow.document.documentElement.style.setProperty('--hovercolor', colors[col]);
         }
     </script>
 </body>
 
-    
 </html>
