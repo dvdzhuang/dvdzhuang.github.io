@@ -1,4 +1,14 @@
-header, body {
-    margin: 1vw;
-    /* padding: */
+/* header,
+body {
+    margin: calc(2 * var(--borderwidth));
+} */
+
+p {
+    padding: 0 calc(2 * var(--borderwidth));
+}
+
+img {
+    float: right;
+    width: 35vw;
+    margin: var(--borderwidth) calc(2 * var(--borderwidth));
 }
