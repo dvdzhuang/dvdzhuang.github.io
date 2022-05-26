@@ -1,0 +1,40 @@
+/* header,
+body {
+    margin: calc(2 * var(--borderwidth));
+} */
+
+p {
+    padding: 0 calc(2 * var(--borderwidth));
+}
+
+img {
+    float: right;
+    width: 35vw;
+    margin: var(--borderwidth) calc(2 * var(--borderwidth));
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+.icon {
+    float: right;
+    display: block;
+    padding: calc(2 * var(--borderwidth));
+    padding-left: 0;
+}
+
+.icon>a>svg {
+    align-self: center;
+    width: 5vh;
+    height: 5vh;
+    fill: var(--hovercolor);
+    /* padding: 2vh; */
+}
+
+.icon>a>svg:hover {
+    fill: var(--txtcolor)
+}
