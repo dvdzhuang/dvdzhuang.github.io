@@ -35,6 +35,8 @@ figure {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    font-size: 2vw;
+    margin: 4vw;
 }
 
 figure>img {
