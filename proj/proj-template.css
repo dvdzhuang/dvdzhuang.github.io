@@ -26,3 +26,23 @@
     margin-top: 10vh;
     padding: 0 calc(2 * var(--borderwidth));
 }
+
+a {
+    color: var(--hovercolor);
+}
+
+figure {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+figure>img {
+    width: 20vw;
+    margin: auto;
+}
+
+/* figure>figcaption {
+    position: absolute;
+    bottom: 0;
+} */

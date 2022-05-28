@@ -44,4 +44,5 @@ a {
 
 .logo>ul {
     line-height: 2;
+    font-size: inherit;
 }
