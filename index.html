@@ -48,14 +48,14 @@
         }
         function updateIFrame() {
             iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
-            iframe.getElementById('theme').setAttribute('href', file);
+            frames['info-window'].document.setAttribute('href', file);
         }
         function changeTheme(newTheme) {
-            colors = themes[newTheme];
+            theme = newTheme;
             setColor();
-            var file = 'themes/' + newTheme + '.css';
+            var file = 'themes/' + theme + '.css';
             document.getElementById('theme').setAttribute('href', file);
-            iframe.getElementById('theme').setAttribute('href', file);
+            frames['info-window'].document.setAttribute('href', file);
         }
     </script>
 
