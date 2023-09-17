@@ -1,0 +1,10 @@
+:root {
+    --bgcolor: black;
+    --txtcolor: white;
+    --hovercolor: aquamarine;
+    --borderwidth: 1vh;
+}
+
+body {
+    font-family: "Helvetica", "Arial", "sans-serif";
+}

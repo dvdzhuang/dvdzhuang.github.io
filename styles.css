@@ -186,3 +186,20 @@ h4 {
     color: var(--bgcolor);
     background-color: var(--hovercolor);
 }
+
+.themes {
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+}
+
+.themes>svg {
+    fill-opacity: 0;
+    width: 5vh;
+    height: 5vh;
+}
+
+.themes>svg:hover {
+    fill-opacity: inherit;
+}
