@@ -52,7 +52,7 @@
             iframe.getElementById('theme').setAttribute('href', '/themes/' + theme + '.css');
         }
         function changeTheme(newTheme) {
-            theme = newTheme;
+            theme = (theme === newTheme) ? 'default' : newTheme;
             setColor();
             var file = '/themes/' + theme + '.css';
             document.getElementById('theme').setAttribute('href', file);
