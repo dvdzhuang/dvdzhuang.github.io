@@ -9,8 +9,7 @@
 @font-face { font-family: joffrey; src: url('fonts/joffrey.ttf'); }
 @font-face { font-family: amogus; src: url('fonts/AmongUs-Regular.ttf'); }
 
-header,
-body {
+html {
     cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1563.cur), auto !important;
 }
 

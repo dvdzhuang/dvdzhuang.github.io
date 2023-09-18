@@ -49,12 +49,12 @@
         function updateIFrame() {
             var iframe = frames['info-window'].document;
             iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
-            iframe.getElementById('theme').setAttribute('href', 'themes/' + theme + '.css');
+            iframe.getElementById('theme').setAttribute('href', '/themes/' + theme + '.css');
         }
         function changeTheme(newTheme) {
             theme = newTheme;
             setColor();
-            var file = 'themes/' + theme + '.css';
+            var file = '/themes/' + theme + '.css';
             document.getElementById('theme').setAttribute('href', file);
             frames['info-window'].document.getElementById('theme').setAttribute('href', file);
         }
