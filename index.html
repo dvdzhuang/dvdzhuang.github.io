@@ -39,23 +39,24 @@
             'amogus': ['#d71e22']
         };
         var theme = 'default';
-        var iframe = document.getElementById('info-window').contentWindow.document;
         function setColor() {
             col = (col + 1) % themes[theme].length;
             var newColor = themes[theme][col]
             root.style.setProperty('--hovercolor', newColor);
-            iframe.documentElement.style.setProperty('--hovercolor', newColor);
+            // frames['info-window'] is same as document.getElementById('info-window').contentWindow
+            frames['info-window'].document.documentElement.style.setProperty('--hovercolor', newColor);
         }
         function updateIFrame() {
+            var iframe = frames['info-window'].document;
             iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
-            frames['info-window'].document.setAttribute('href', file);
+            iframe.getElementById('theme').setAttribute('href', 'themes/' + theme + '.css');
         }
         function changeTheme(newTheme) {
             theme = newTheme;
             setColor();
             var file = 'themes/' + theme + '.css';
             document.getElementById('theme').setAttribute('href', file);
-            frames['info-window'].document.setAttribute('href', file);
+            frames['info-window'].document.getElementById('theme').setAttribute('href', file);
         }
     </script>
 
