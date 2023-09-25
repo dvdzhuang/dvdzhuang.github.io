@@ -11,8 +11,37 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-DWLTJPTK6X');
+
+        var root = document.querySelector(':root');
+        var col = 0;
+        var themes = {
+            'default': ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'],
+            'amogus': ['#d71e22']
+        };
+        var theme = localStorage.getItem('theme');
+        if (!theme)
+            theme = 'default';
+        function setColor() {
+            col = (col + 1) % themes[theme].length;
+            var newColor = themes[theme][col]
+            root.style.setProperty('--hovercolor', newColor);
+            // frames['info-window'] is same as document.getElementById('info-window').contentWindow
+            frames['info-window'].document.documentElement.style.setProperty('--hovercolor', newColor);
+        }
+        function updateIFrame() {
+            var iframe = frames['info-window'].document;
+            iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
+            iframe.getElementById('theme').setAttribute('href', '/themes/' + theme + '.css');
+        }
+        function changeTheme(newTheme) {
+            theme = (theme === newTheme) ? 'default' : newTheme;
+            col = -1;
+            setColor();
+            var file = '/themes/' + theme + '.css';
+            document.getElementById('theme').setAttribute('href', file);
+            frames['info-window'].document.getElementById('theme').setAttribute('href', file);
+        }
     </script>
 </head>
 
@@ -32,32 +61,7 @@
     </div>
 
     <script>
-        var root = document.querySelector(':root');
-        var col = 0;
-        var themes = {
-            'default': ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'],
-            'amogus': ['#d71e22']
-        };
-        var theme = 'default';
-        function setColor() {
-            col = (col + 1) % themes[theme].length;
-            var newColor = themes[theme][col]
-            root.style.setProperty('--hovercolor', newColor);
-            // frames['info-window'] is same as document.getElementById('info-window').contentWindow
-            frames['info-window'].document.documentElement.style.setProperty('--hovercolor', newColor);
-        }
-        function updateIFrame() {
-            var iframe = frames['info-window'].document;
-            iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
-            iframe.getElementById('theme').setAttribute('href', '/themes/' + theme + '.css');
-        }
-        function changeTheme(newTheme) {
-            theme = (theme === newTheme) ? 'default' : newTheme;
-            setColor();
-            var file = '/themes/' + theme + '.css';
-            document.getElementById('theme').setAttribute('href', file);
-            frames['info-window'].document.getElementById('theme').setAttribute('href', file);
-        }
+        window.onload = changeTheme(theme);
     </script>
 
     <div class="themes">
