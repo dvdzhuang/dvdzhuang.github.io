@@ -13,23 +13,22 @@
         gtag('js', new Date());
         gtag('config', 'G-DWLTJPTK6X');
 
-        var root = document.querySelector(':root');
-        var col = 0;
-        var themes = {
+        let root = document.querySelector(':root');
+        let col = 0;
+        let themes = {
             'default': ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'],
             'amogus': ['#d71e22']
         };
-        var theme = 'default';
+        let theme = 'default';
         function setColor() {
-            console.log(localStorage.getItem('theme'));
             col = (col + 1) % themes[theme].length;
-            var newColor = themes[theme][col]
+            let newColor = themes[theme][col]
             root.style.setProperty('--hovercolor', newColor);
             // frames['info-window'] is same as document.getElementById('info-window').contentWindow
             frames['info-window'].document.documentElement.style.setProperty('--hovercolor', newColor);
         }
         function updateIFrame() {
-            var iframe = frames['info-window'].document;
+            let iframe = frames['info-window'].document;
             iframe.documentElement.style.setProperty('--hovercolor', themes[theme][col]);
             iframe.getElementById('theme').setAttribute('href', '/themes/' + theme + '.css');
         }
@@ -37,7 +36,7 @@
             theme = (theme === newTheme) ? 'default' : newTheme;
             col = -1;
             setColor();
-            var file = '/themes/' + theme + '.css';
+            let file = '/themes/' + theme + '.css';
             document.getElementById('theme').setAttribute('href', file);
             frames['info-window'].document.getElementById('theme').setAttribute('href', file);
         }
@@ -61,10 +60,9 @@
 
     <script>
         window.onload = function () {
-            const temp = localStorage.getItem('theme');
-            console.log(temp);
-            if (temp) theme = temp;
-            changeTheme(theme);
+            const newTheme = localStorage.getItem('theme');
+            if (newTheme)
+                changeTheme(newTheme);
         };
     </script>
 
