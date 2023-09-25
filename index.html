@@ -19,9 +19,7 @@
             'default': ['aquamarine', 'lightsteelblue', 'plum', 'pink', 'lightcoral', 'lightsalmon', 'bisque', 'palegreen'],
             'amogus': ['#d71e22']
         };
-        var theme = localStorage.getItem('theme');
-        if (!theme)
-            theme = 'default';
+        var theme = 'default';
         function setColor() {
             col = (col + 1) % themes[theme].length;
             var newColor = themes[theme][col]
@@ -61,7 +59,11 @@
     </div>
 
     <script>
-        window.onload = changeTheme(theme);
+        window.onload = function () {
+            const temp = localStorage.getItem('theme');
+            if (temp) theme = temp;
+            changeTheme(theme);
+        };
     </script>
 
     <div class="themes">
