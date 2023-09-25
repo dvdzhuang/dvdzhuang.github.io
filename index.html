@@ -21,6 +21,7 @@
         };
         var theme = 'default';
         function setColor() {
+            console.log(localStorage.getItem('theme'));
             col = (col + 1) % themes[theme].length;
             var newColor = themes[theme][col]
             root.style.setProperty('--hovercolor', newColor);
@@ -61,6 +62,7 @@
     <script>
         window.onload = function () {
             const temp = localStorage.getItem('theme');
+            console.log(temp);
             if (temp) theme = temp;
             changeTheme(theme);
         };
