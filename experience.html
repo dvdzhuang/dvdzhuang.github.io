@@ -3,12 +3,45 @@
 
 <head>
     <title>Experience</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="exp.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/exp.css">
     <link id="theme" rel="stylesheet" href="/themes/default.css">
 </head>
 
 <body>
+    <div class="exp-grid">
+        <div class="logo" id="roblox">
+            <img src="exp/roblox_white.svg" alt="Roblox">
+            <h1>Senior Software Engineer</h1>
+            <h2>San Mateo, CA</h2>
+            <h3>July 2022 -</h3>
+        </div>
+        <div class="desc">
+            <ul>
+                <li>Owned/maintained the game engine libraries for HTTP, websocket, SignalR, asset loading and caching,
+                    and game networking over TCP/UDP</li>
+                <li>Carefully designed performant and reliable libraries that run on millions of users’ devices and on a
+                    range of platforms including Windows, OSX, Linux, iOS, Android, Xbox, and PlayStation</li>
+                <li>Planned cross-team, complex projects and saw them to completion
+                    <ul>
+                        <li>Ported game engine networking libraries to work on PlayStation</li>
+                        <li>Wrote the game engine SignalR client</li>
+                        <li>Revamped the engine asset cache, improving observability and generating significant CDN
+                            cost savings</li>
+                        <li>Converted top frequent heap allocations in networking to use memory pools</li>
+                        <li>Upgraded and optimized the HTTP client to support HTTP/2 and HTTP/3, fixing several bugs in
+                            libcurl in the process</li>
+                        <li>Reworked thread structure of the HTTP client to transition from polling to event-driven
+                            architecture, reducing game server CPU load</li>
+                        <li>Implemented ACK-pacing as a means of rate-limiting connections and created a system to share
+                            bandwidth fairly among network consumers</li>
+                    </ul>
+                </li>
+                <li>Made improvements to telemetry, helping to find bottlenecks and inform team decisions</li>
+                <li>Maintained user-facing APIs for asset loading and HTTP requests, responding to user feedback</li>
+            </ul>
+        </div>
+    </div>
     <div class="exp-grid">
         <div class="logo">
             <img src="exp/ptc.svg" alt="PTC">
@@ -16,7 +49,7 @@
             <h2>Boston, MA</h2>
             <h3>Feb 2021 - Aug 2021</h3>
         </div>
-        <div class="logo">
+        <div class="desc">
             <ul>
                 <li>Wrote front-end and back-end code for Onshape, an online CAD software service</li>
                 <li>Developed new features for users, primarily using Java and TypeScript
@@ -39,12 +72,6 @@
                 </li>
                 <li>Wrote JUnit and Protractor tests for new features</li>
             </ul>
-        </div>
-        <div class="logo" id="roblox">
-            <img src="exp/roblox_white.svg" alt="Roblox">
-            <h1>Software Engineer</h1>
-            <h2>San Mateo, CA</h2>
-            <h3>July 2022 -</h3>
         </div>
     </div>
 </body>

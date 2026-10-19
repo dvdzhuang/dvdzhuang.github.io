@@ -13,6 +13,12 @@ img {
     margin: var(--borderwidth) calc(2 * var(--borderwidth));
 }
 
+h1 {
+    font-size: 4vw;
+    color: var(--hovercolor);
+    margin: var(--borderwidth) calc(2 * var(--borderwidth));
+}
+
 .navbar {
     position: fixed;
     bottom: 0;

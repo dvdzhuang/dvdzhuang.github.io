@@ -17,7 +17,7 @@
 
 .categories-grid>h1 {
     /* display: flex; */
-    /* font-size: 3vh; */
+    font-size: 4vh;
     text-align: center;
     align-self: center;
 }
@@ -25,6 +25,32 @@
 .content {
     margin-top: 10vh;
     padding: 0 calc(2 * var(--borderwidth));
+}
+
+@container style(--isVertical: 1) {
+    .categories-grid {
+        top: auto;
+        bottom: 0;
+    }
+
+    .content {
+        margin-top: 0;
+        margin-bottom: 10vh;
+    }
+}
+
+@media only screen and (aspect-ratio <=1) {
+    body {
+        font-size: 1.5vh;
+    }
+
+    .categories-grid>a {
+        font-size: 3vw;
+    }
+
+    .categories-grid>h1 {
+        font-size: 4vw;
+    }
 }
 
 a {
