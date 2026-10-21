@@ -6,10 +6,8 @@ a {
     display: grid;
     grid-gap: 2.5vw;
     grid-template-columns: 30% 65%;
-    /* grid-template-rows: repeat(2, 1fr); */
     width: 97.5%;
     margin-bottom: 5vh;
-    /* height: 100vh; */
 }
 
 .logo,
@@ -47,7 +45,6 @@ a {
 
 .desc>ul {
     line-height: 2;
-    font-size: 1.5vw;
 }
 
 @media only screen and (aspect-ratio <=4/5) {
@@ -57,17 +54,12 @@ a {
 
     .logo {
         position: sticky;
-        margin-top: 2.5vh;
         top: 0;
         width: 100%;
     }
 
-    body,
-    .desc>ul {
-        font-size: 1.5vh;
-    }
-
     .logo>img {
+        margin-top: 2.5vh;
         width: auto;
         height: 5vh;
     }

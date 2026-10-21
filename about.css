@@ -19,6 +19,12 @@ h1 {
     margin: var(--borderwidth) calc(2 * var(--borderwidth));
 }
 
+@container style(--isVertical: 1) {
+    h1 {
+        font-size: 4vh;
+    }
+}
+
 .navbar {
     position: fixed;
     bottom: 0;

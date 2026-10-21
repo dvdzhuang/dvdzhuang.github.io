@@ -93,6 +93,14 @@ h4 {
     }
 }
 
+@media only screen and (aspect-ratio <=1) {
+
+    header,
+    body {
+        font-size: 1.5vh;
+    }
+}
+
 .categories-grid>a {
     display: flex;
     align-items: center;
